@@ -1,0 +1,41 @@
+{
+  "name": "bootstrap",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "postinstall": "rnp patch -n 9100",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@eva-design/eva": "^1.0.1",
+    "ct-ui-kit": "/Users/cactis/_devs/_react/ct-ui-kit",
+    "react": "16.9.0",
+    "npm": "^6.11.3",
+    "react-native": "latest",
+    "react-native-device-info": "^3.1.4",
+    "react-native-gesture-handler": "^1.4.1",
+    "react-native-reanimated": "^1.2.0",
+    "react-native-ui-kitten": "^4.2.0-beta.1",
+    "react-navigation": "^4.0.6",
+    "react-navigation-stack": "latest",
+    "react-navigation-tabs": "latest"
+  },
+  "devDependencies": {
+    "babel-cli": "latest",
+    "@babel/core": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.4.0",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
