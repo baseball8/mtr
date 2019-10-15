@@ -18,6 +18,7 @@ import {Root} from './src/Stacks/Root';
 const AppContainer = createAppContainer(Root);
 
 let _navigation;
+
 export class App extends React.PureComponent {
   state = {
     data: null,
@@ -47,7 +48,6 @@ export class App extends React.PureComponent {
           zIndex={1000000}
           onClose={data => onDropdownClosed()}
         />
-
         <AppContainer
           ref={nav => {
             this.navigator = nav;

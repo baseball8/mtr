@@ -2,6 +2,10 @@ import React from 'react';
 
 // import NavigationService from '../../services/NavigationService.js'
 
+window.STATUSBAR_COLOR = 'blue';
+window.STATUSBAR_TOP = '10%';
+window.SAFEAREA_TOP = '10%';
+window.BUTTON_COLOR = 'blue';
 export const navigationDefault = navigation => {
   return {
     headerStyle: {
