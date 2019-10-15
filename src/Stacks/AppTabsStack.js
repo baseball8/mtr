@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 
 import * as Stacks from '..';
 import {HomeStack} from './HomeStack';
+import {MeStack} from './MeStack';
 
 export const AppTabsStack = createBottomTabNavigator(
   {
@@ -10,29 +11,19 @@ export const AppTabsStack = createBottomTabNavigator(
       screen: HomeStack,
       navigationOptions: ({navigation, header}) => ({
         ...header,
-        title: 'Tab1',
+        title: '藥事',
         tabBarIcon: ({focused, tintColor}) => {
           return <Icon focused={focused} name="home" />;
         },
       }),
     },
-    Home1Stack: {
-      screen: HomeStack,
+    MeStack: {
+      screen: MeStack,
       navigationOptions: ({navigation, header}) => ({
         ...header,
-        title: 'Tab2',
+        title: '我',
         tabBarIcon: ({focused, tintColor}) => {
           return <Icon focused={focused} name="phone" />;
-        },
-      }),
-    },
-    Home2Stack: {
-      screen: HomeStack,
-      navigationOptions: ({navigation, header}) => ({
-        ...header,
-        title: 'Tab3',
-        tabBarIcon: ({focused, tintColor}) => {
-          return <Icon focused={focused} name="gear" />;
         },
       }),
     },
