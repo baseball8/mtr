@@ -2,10 +2,11 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 
 let _this, _navigation;
-export class Home2Screen extends React.PureComponent {
+export class ThingsFormScreen extends React.PureComponent {
   static navigationOptions = ({navigation}) => {
     return {
-      title: navigation.state.params?.title || '預設標題',
+      title: navigation.state?.params?.title || 'Bootstrap Home',
+      // headerLeft: null,
     };
   };
   state = {
@@ -31,18 +32,20 @@ export class Home2Screen extends React.PureComponent {
   render() {
     let {data} = this.state;
     // if (!data) return null
-    log(data, 'data in Home2Screen render() ');
+    log(data, 'data in ThingsFormScreen render() ');
     return (
       <T.Screen>
-        <T.Label text="Home2Screen Screen" />
-        <T.List />
+        <T.Center>
+          <T.Label text="ThingsFormScreen" />
+          <T.Button title="Alert" onPress={() => alert()} />
+        </T.Center>
       </T.Screen>
     );
   }
 
   initStateData = onComplete => {
-    if (_navigation.state.params) {
-      let {data} = _navigation.state.params;
+    if (_navigation.state?.params) {
+      let {data} = _navigation.state?.params;
       // _navigation.setParams({ title: '改為新標題' })
       this.mounted &&
         this.setState({data}, () => {

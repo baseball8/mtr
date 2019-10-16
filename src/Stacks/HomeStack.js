@@ -6,6 +6,9 @@ import {navigationDefault} from './Options';
 export const HomeStack = createStackNavigator(
   {
     HomeScreen: Screens.HomeScreen,
+    ChooseScreen: Screens.ChooseScreen,
+    MedicationFormScreen: Screens.MedicationFormScreen,
+    ThingsFormScreen: Screens.ThingsFormScreen,
     // Home2Screen: Screens.Home2Screen,
   },
   {

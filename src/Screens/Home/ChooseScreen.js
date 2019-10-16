@@ -1,19 +1,11 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
+
 let _this, _navigation;
-export class HomeScreen extends React.PureComponent {
+export class ChooseScreen extends React.PureComponent {
   static navigationOptions = ({navigation}) => {
     return {
-      title: navigation.state?.params?.title || 'HomeScreen',
-      headerLeft: null,
-      headerRight: (
-        <T.Icon
-          iconSize={20}
-          color="black"
-          onPress={() => navigateTo(_navigation, 'ChooseScreen')}
-        />
-      ),
+      title: navigation.state.params?.title || 'ChooseScreen',
     };
   };
   state = {
@@ -36,36 +28,33 @@ export class HomeScreen extends React.PureComponent {
       _navigation = this.props.navigation;
   }
 
-  medicationItem = ({item, index}) => {
-    return <T.Label text="藥事清單" />;
-  };
-
-  thingsItem = ({item, index}) => {
-    return <T.Label text="要事清單" />;
-  };
-
   render() {
     let {data} = this.state;
     // if (!data) return null
-    log(data, 'data in HomeScreen render() ');
+    log(data, 'data in ChooseScreen render() ');
     return (
       <T.Screen>
-        <Calendar />
-        <T.Screen scrollable={true} backgroundColor="white">
-          <T.List data="222222222" renderItem={this.medicationItem} />
-        </T.Screen>
-
-        <T.Space />
-        <T.Screen scrollable={true} backgroundColor="white">
-          <T.List data="111" renderItem={this.thingsItem} />
-        </T.Screen>
+        {/* <T.List /> */}
+        {/* <T.Label text="ChooseScreen Screen" /> */}
+        <T.Center>
+          <T.Button
+            title="藥事"
+            onPress={() => navigateTo(_navigation, 'MedicationFormScreen')}
+          />
+          <T.Space />
+          <T.Space />
+          <T.Button
+            title="是事"
+            onPress={() => navigateTo(_navigation, 'ThingsFormScreen')}
+          />
+        </T.Center>
       </T.Screen>
     );
   }
 
   initStateData = onComplete => {
-    if (_navigation.state?.params) {
-      let {data} = _navigation.state?.params;
+    if (_navigation.state.params) {
+      let {data} = _navigation.state.params;
       // _navigation.setParams({ title: '改為新標題' })
       this.mounted &&
         this.setState({data}, () => {

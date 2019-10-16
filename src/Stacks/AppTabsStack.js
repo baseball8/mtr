@@ -21,7 +21,7 @@ export const AppTabsStack = createBottomTabNavigator(
       screen: MeStack,
       navigationOptions: ({navigation, header}) => ({
         ...header,
-        title: '我',
+        title: '設定',
         tabBarIcon: ({focused, tintColor}) => {
           return <Icon focused={focused} name="phone" />;
         },
