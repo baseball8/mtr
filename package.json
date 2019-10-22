@@ -1,5 +1,5 @@
 {
-  "name": "react-native-bootstrap",
+  "name": "mtr",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "core-js": "^3.3.1",
     "core-js-bundle": "^3.3.1",
     "core-js-pure": "^3.3.1",
-    "ct-ui-kit": "/Users/RichYao/git/mtr/react-native-bootstrap/ct-ui-kit",
+    "ct-ui-kit": "/Users/RichYao/git/mtr/mtr/ct-ui-kit",
     "npm": "^6.11.3",
     "react": "16.8.6",
     "react-native": "0.60.5",
