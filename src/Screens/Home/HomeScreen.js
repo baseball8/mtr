@@ -4,11 +4,8 @@ import {Agenda} from 'react-native-calendars';
 
 export class HomeScreen extends React.PureComponent {
   state = {
-<<<<<<< HEAD
     data: null,
     mounted: false,
-=======
->>>>>>> b34e11cc59fb5077e8b576fea6b259deed2fce34
     items: {},
   };
 
@@ -76,7 +73,6 @@ export class HomeScreen extends React.PureComponent {
 
   renderEmptyDate = () => {
     return (
-<<<<<<< HEAD
       <T.Screen>
         <Agenda
           items={this.state.items}
@@ -87,11 +83,6 @@ export class HomeScreen extends React.PureComponent {
           rowHasChanged={this.rowHasChanged}
         />
       </T.Screen>
-=======
-      <View style={styles.emptyDate}>
-        <Text>This is empty date!</Text>
-      </View>
->>>>>>> b34e11cc59fb5077e8b576fea6b259deed2fce34
     );
   };
 
@@ -103,7 +94,6 @@ export class HomeScreen extends React.PureComponent {
     const date = new Date(time);
     return date.toISOString().split('T')[0];
   };
-<<<<<<< HEAD
   componentWillUnmount() {
     this.mounted = false;
   }
@@ -168,11 +158,6 @@ export class HomeScreen extends React.PureComponent {
   };
 }
 var styles = StyleSheet.create({
-=======
-}
-
-const styles = StyleSheet.create({
->>>>>>> b34e11cc59fb5077e8b576fea6b259deed2fce34
   item: {
     backgroundColor: 'white',
     flex: 1,
