@@ -35,10 +35,7 @@ export class MedicationFormScreen extends React.PureComponent {
     log(data, 'data in MedicationFormScreen render() ');
     return (
       <T.Screen>
-        <T.Center>
-          <T.Label text="MedicationFormScreen" />
-          <T.Button title="Alert" onPress={() => alert()} />
-        </T.Center>
+        <T.Form />
       </T.Screen>
     );
   }

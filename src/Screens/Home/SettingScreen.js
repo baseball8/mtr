@@ -34,8 +34,13 @@ export class SettingScreen extends React.PureComponent {
     log(data, 'data in SettingScreen render() ');
     return (
       <T.Screen>
-        <T.Label text="SettingScreen Screen" />
-        <T.List />
+        <T.Field title="email" />
+        <T.Field title="顯示名稱" />
+        <T.Field title="修改密碼" />
+        <T.Button
+          title="確認修改"
+          onPress={() => T.NavigationService.goBack()}
+        />
       </T.Screen>
     );
   }

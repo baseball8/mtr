@@ -35,10 +35,7 @@ export class ThingsFormScreen extends React.PureComponent {
     log(data, 'data in ThingsFormScreen render() ');
     return (
       <T.Screen>
-        <T.Center>
-          <T.Label text="ThingsFormScreen" />
-          <T.Button title="Alert" onPress={() => alert()} />
-        </T.Center>
+        <T.Form />
       </T.Screen>
     );
   }
