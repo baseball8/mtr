@@ -50,16 +50,13 @@ export class HomeScreen extends React.PureComponent {
     // if (!data) return null
     log(data, 'data in HomeScreen render() ');
     return (
-      <T.Screen>
-        <Agenda
-          items={this.state.items}
-          loadItemsForMonth={this.loadItems}
-          selected={'2019-10-23'}
-          renderItem={this.renderItem}
-          renderEmptyDate={this.renderEmptyDate}
-          rowHasChanged={this.rowHasChanged}
-        />
-      </T.Screen>
+      <Agenda
+        items={this.state.items}
+        loadItemsForMonth={this.loadItems}
+        renderItem={this.renderItem}
+        renderEmptyDate={this.renderEmptyDate}
+        rowHasChanged={this.rowHasChanged}
+      />
     );
   }
 
@@ -85,7 +82,11 @@ export class HomeScreen extends React.PureComponent {
     setTimeout(() => {
       for (let i = -15; i < 85; i++) {
         const time = day.timestamp + i * 24 * 60 * 60 * 1000;
+        log('day.timestamp', day.timestamp);
+        log('i', i);
+        log('time', time);
         const strTime = this.timeToString(time);
+        log('strTime', strTime);
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
           const numItems = Math.floor(Math.random() * 5);
@@ -110,23 +111,26 @@ export class HomeScreen extends React.PureComponent {
   };
 
   renderItem = item => {
-    log('items', this.state.items);
     log('item', item);
     return (
-      <T.Screen style={[styles.item, {height: item.height}]}>
-        <T.Label>{item.name}</T.Label>
-      </T.Screen>
+      <T.View backgroundColor="white" borderRadius={5} height={50} padding={10}>
+        <T.Grid layout="row">
+          <T.Grid flex={3}>
+            <T.Label>胃藥</T.Label>
+          </T.Grid>
+          <T.Grid flex={1} layout="row">
+            <T.Icon name="comment" iconSets="FontAwesome" />
+
+            <T.Icon name="check" onPress={() => alert(1111)} />
+          </T.Grid>
+        </T.Grid>
+      </T.View>
     );
   };
   renderEmptyDate = () => {
     let {data} = this.state;
     // if (!data) return null
     log(data, 'data in HomeScreen render() ');
-    return (
-      <T.Screen style={styles.emptyDate}>
-        <T.Label>This is empty date!</T.Label>
-      </T.Screen>
-    );
   };
 
   rowHasChanged = (r1, r2) => {

@@ -44,7 +44,7 @@ export class ChooseScreen extends React.PureComponent {
           <T.Space />
           <T.Space />
           <T.Button
-            title="是事"
+            title="要事"
             onPress={() => navigateTo(_navigation, 'ThingsFormScreen')}
           />
         </T.Center>

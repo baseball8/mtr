@@ -35,7 +35,12 @@ export class MedicationFormScreen extends React.PureComponent {
     log(data, 'data in MedicationFormScreen render() ');
     return (
       <T.Screen>
-        <T.Form />
+        <T.Field title="藥名" />
+        <T.Field title="吃幾天" />
+        <T.Field title="一天幾顆" />
+        <T.Field title="吃的時間" />
+        <T.Field title="提醒人" />
+        <T.Button title="確認" />
       </T.Screen>
     );
   }

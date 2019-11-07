@@ -35,7 +35,11 @@ export class ThingsFormScreen extends React.PureComponent {
     log(data, 'data in ThingsFormScreen render() ');
     return (
       <T.Screen>
-        <T.Form />
+        <T.Field title="要事" />
+        <T.Field title="描述" height={200} />
+        <T.Field title="時間" />
+        <T.Field title="提醒人" />
+        <T.Button title="確認" />
       </T.Screen>
     );
   }
